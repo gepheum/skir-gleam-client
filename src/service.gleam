@@ -7,7 +7,7 @@ import gleam/list
 import gleam/result
 import gleam/string
 import internal/json_utils
-import internal/method.{type Method}
+import method.{type Method}
 import serializer
 import type_descriptor
 

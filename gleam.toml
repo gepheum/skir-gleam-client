@@ -1,6 +1,6 @@
 name = "skir_client"
 version = "0.1.0"
-gleam = ">= 1.4.0"
+gleam = ">= 1.5.0"
 
 licences = ["MIT"]
 description = "Skir client runtime library for Gleam"

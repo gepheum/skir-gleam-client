@@ -21,13 +21,7 @@ gleam hex authenticate
 ./pre_commit.sh
 ```
 
-3. Verify publish package locally:
-
-```sh
-gleam publish --dry-run
-```
-
-4. Publish:
+3. Publish:
 
 ```sh
 gleam publish

@@ -7,7 +7,7 @@ import gleam/option
 import gleam/result
 import gleam/string
 import gleam/uri
-import internal/method.{type Method}
+import method.{type Method}
 import serializer
 
 // =============================================================================
