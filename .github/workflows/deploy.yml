@@ -25,4 +25,4 @@ jobs:
       - name: Publish package
         env:
           HEXPM_API_KEY: ${{ secrets.HEXPM_API_KEY }}
-        run: gleam publish
+        run: gleam publish --yes
