@@ -1,9 +1,9 @@
 import gleam/option.{None, Some}
 import gleeunit/should
-import serializer
-import serializers
-import timestamp
-import type_descriptor
+import skir_client/serializer
+import skir_client/serializers
+import skir_client/timestamp
+import skir_client/type_descriptor
 
 // =============================================================================
 // bool_serializer — to_dense_json

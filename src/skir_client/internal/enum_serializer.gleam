@@ -11,12 +11,12 @@ import gleam/option.{type Option}
 import gleam/result
 import gleam/string
 import gleam/string_tree
-import internal/decode_utils
-import internal/json_utils
-import internal/type_adapter
-import internal/unrecognized
-import serializer
-import type_descriptor
+import skir_client/internal/decode_utils
+import skir_client/internal/json_utils
+import skir_client/internal/type_adapter
+import skir_client/internal/unrecognized
+import skir_client/serializer
+import skir_client/type_descriptor
 
 /// Stores an unrecognized variant encountered while deserializing an enum of
 /// type `t`.

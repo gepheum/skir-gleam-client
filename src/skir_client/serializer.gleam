@@ -5,12 +5,9 @@ import gleam/dynamic/decode
 import gleam/json
 import gleam/result
 import gleam/string_tree
-import internal/json_utils
-import internal/type_adapter
-import type_descriptor.{type TypeDescriptor}
-
-pub type TypeAdapter(a) =
-  type_adapter.TypeAdapter(a)
+import skir_client/internal/json_utils
+import skir_client/internal/type_adapter
+import skir_client/type_descriptor.{type TypeDescriptor}
 
 // =============================================================================
 // Serializer
@@ -23,7 +20,7 @@ pub type TypeAdapter(a) =
 /// Use the generated `*_serializer()` functions and library helpers in
 /// serializers.gleam.
 pub type Serializer(a) {
-  Serializer(internal_adapter: TypeAdapter(a))
+  Serializer(internal_adapter: type_adapter.TypeAdapter(a))
 }
 
 // =============================================================================

@@ -11,12 +11,12 @@ import gleam/string
 import gleam/string_tree
 import gleam/time/calendar
 import gleam/time/timestamp as gleam_timestamp
-import internal/json_utils
-import internal/type_adapter
-import recursive
-import serializer as serializer_
-import timestamp as skir_timestamp
-import type_descriptor
+import skir_client/internal/json_utils
+import skir_client/internal/type_adapter
+import skir_client/recursive
+import skir_client/serializer as serializer_
+import skir_client/timestamp as skir_timestamp
+import skir_client/type_descriptor
 
 // =============================================================================
 // Primitive Serializers

@@ -2,7 +2,7 @@ import gleam/bytes_tree.{type BytesTree}
 import gleam/dynamic/decode
 import gleam/json
 import gleam/string_tree
-import type_descriptor.{type TypeDescriptor}
+import skir_client/type_descriptor.{type TypeDescriptor}
 
 // =============================================================================
 // UnrecognizedValues

@@ -6,10 +6,10 @@ import gleam/json
 import gleam/list
 import gleam/result
 import gleam/string
-import internal/json_utils
-import method.{type Method}
-import serializer
-import type_descriptor
+import skir_client/internal/json_utils
+import skir_client/method.{type Method}
+import skir_client/serializer
+import skir_client/type_descriptor
 
 // =============================================================================
 // ServiceError

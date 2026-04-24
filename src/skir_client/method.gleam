@@ -1,4 +1,4 @@
-import serializer.{type Serializer}
+import skir_client/serializer.{type Serializer}
 
 /// Metadata for a Skir RPC method.
 pub type Method(request, response) {
