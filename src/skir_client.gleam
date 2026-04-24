@@ -182,9 +182,7 @@ pub fn keyed_list_serializer(
 pub const unix_epoch = timestamp.unix_epoch
 
 /// Converts a Skir Timestamp to a Gleam Timestamp.
-pub fn to_gleam_timestamp(
-  t: timestamp.Timestamp,
-) -> gleam_timestamp.Timestamp {
+pub fn to_gleam_timestamp(t: timestamp.Timestamp) -> gleam_timestamp.Timestamp {
   timestamp.to_gleam_timestamp(t)
 }
 
