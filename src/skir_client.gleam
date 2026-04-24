@@ -3,10 +3,17 @@ import gleam/json
 import gleam/option.{type Option}
 import gleam/time/timestamp as gleam_timestamp
 import skir_client/recursive
-import skir_client/serializer.{type Serializer} as serializer_
+import skir_client/serializer as serializer_
 import skir_client/serializers as serializers_
 import skir_client/timestamp
 import skir_client/type_descriptor.{type TypeDescriptor}
+
+/// A value that can serialize and deserialize values of type `a` to/from JSON
+/// and binary formats.
+///
+/// Do not construct this directly, use the `*_serializer()` functions.
+pub type Serializer(a) =
+  serializer_.Serializer(a)
 
 /// Serializes a value to dense (field-index-based) JSON value.
 pub fn to_dense_json(serializer: Serializer(a), value: a) -> json.Json {
@@ -147,7 +154,7 @@ pub fn bytes_serializer() -> Serializer(BitArray) {
 }
 
 /// Returns the serializer for Timestamp values.
-pub fn timestamp_serializer() -> Serializer(timestamp.Timestamp) {
+pub fn timestamp_serializer() -> Serializer(Timestamp) {
   serializers_.timestamp_serializer()
 }
 
@@ -178,15 +185,20 @@ pub fn keyed_list_serializer(
   serializers_.keyed_list_serializer(item_serializer, key_extractor)
 }
 
+/// A timestamp represented as milliseconds since the Unix epoch
+/// (1970-01-01T00:00:00Z).
+pub type Timestamp =
+  timestamp.Timestamp
+
 /// The default Timestamp: the Unix epoch (1970-01-01T00:00:00Z).
 pub const unix_epoch = timestamp.unix_epoch
 
 /// Converts a Skir Timestamp to a Gleam Timestamp.
-pub fn to_gleam_timestamp(t: timestamp.Timestamp) -> gleam_timestamp.Timestamp {
+pub fn to_gleam_timestamp(t: Timestamp) -> gleam_timestamp.Timestamp {
   timestamp.to_gleam_timestamp(t)
 }
 
 /// Converts a Gleam Timestamp to a Skir Timestamp.
-pub fn from_gleam_timestamp(t: gleam_timestamp.Timestamp) -> timestamp.Timestamp {
+pub fn from_gleam_timestamp(t: gleam_timestamp.Timestamp) -> Timestamp {
   timestamp.from_gleam_timestamp(t)
 }

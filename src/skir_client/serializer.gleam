@@ -16,9 +16,7 @@ import skir_client/type_descriptor.{type TypeDescriptor}
 /// A value that can serialize and deserialize values of type `a` to/from JSON
 /// and binary formats.
 ///
-/// Do not construct this directly.
-/// Use the generated `*_serializer()` functions and library helpers in
-/// serializers.gleam.
+/// Do not construct this directly, use the `*_serializer()` functions.
 pub type Serializer(a) {
   Serializer(internal_adapter: type_adapter.TypeAdapter(a))
 }
