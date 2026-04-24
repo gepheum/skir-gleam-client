@@ -1,5 +1,5 @@
 name = "skir_client"
-version = "0.1.0"
+version = "1.0.0"
 gleam = ">= 1.5.0"
 
 licences = ["MIT"]
