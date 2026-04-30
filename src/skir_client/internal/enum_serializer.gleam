@@ -369,7 +369,7 @@ fn enum_append_readable_json_code(
 fn unknown_to_readable_json_code(
   _unrec: UnrecognizedVariant(e),
 ) -> string_tree.StringTree {
-  json.to_string_tree(json.string("UNKNOWN"))
+  json.to_string_tree(json.string("unknown"))
 }
 
 fn unknown_to_json(
@@ -377,7 +377,7 @@ fn unknown_to_json(
   readable: type_adapter.JsonFlavor,
 ) -> json.Json {
   case readable {
-    type_adapter.Readable -> json.string("UNKNOWN")
+    type_adapter.Readable -> json.string("unknown")
     type_adapter.Dense ->
       case unrec {
         None -> json.int(0)
