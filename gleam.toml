@@ -1,9 +1,9 @@
 name = "skir_client"
-version = "1.0.1"
+version = "1.0.2"
 gleam = ">= 1.5.0"
 
 licences = ["MIT"]
-description = "Skir client runtime library for Gleam"
+description = "Serializable Gleam data types generated from .skir files"
 
 repository = { type = "github", user = "gepheum", repo = "skir" }
 links = [
